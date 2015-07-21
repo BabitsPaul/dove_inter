@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\parser">
+      <UniqueIdentifier>{12a68488-1a7d-4f0c-b2db-7d10a864a819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\inter">
+      <UniqueIdentifier>{0ce4658f-5386-4c8f-8c59-a30bb093ba30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\comp">
+      <UniqueIdentifier>{dd9cfa8c-06bb-44b9-927f-2c1d11d8d046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\model">
+      <UniqueIdentifier>{b849e072-b500-4504-8694-30e75337df67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\parser\langdef">
+      <UniqueIdentifier>{0f9a34cc-ce7d-4378-a14a-607b7c2ec823}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inter.h">
+      <Filter>Header Files\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="intercontext.h">
+      <Filter>Header Files\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="const.h">
+      <Filter>Header Files\parser\langdef</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
