@@ -5,6 +5,23 @@
 #include <string>
 using namespace std;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// const.h
+//
+// defines general constants of the language
+// like valid characters for the general
+// language (not that this doesn't affect stringliterals, which
+// are implemented as unicode in general). Furthermore this header
+// provides priorityinformation for operators
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// char sets
+//
+// charsets used by the language
+// here the charsets for names, numbers, etc. are defined
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 const char valid[]{
 		//alphabet lowercase
 	'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
@@ -37,6 +54,12 @@ const char uppercase[]{
 	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
 		'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// operators
+//
+// this part defines all operators and their respective priority in the language
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 struct opRep {
 	opRep(string rep , bool prefix , bool unary) {
@@ -116,6 +139,6 @@ const map<opRep , int> createMap()
 	return res;
 }
 
-const map<opRep , int	> mp = createMap();
+const map<opRep , int> mp = createMap();
 
 #endif

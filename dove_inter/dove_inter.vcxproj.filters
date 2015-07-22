@@ -28,6 +28,21 @@
     <Filter Include="Header Files\parser\langdef">
       <UniqueIdentifier>{0f9a34cc-ce7d-4378-a14a-607b7c2ec823}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\comp">
+      <UniqueIdentifier>{239459e4-a063-45a9-8474-12d1d495c2c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\inter">
+      <UniqueIdentifier>{2abf4260-fc4d-4758-969f-6f5d80816a8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model">
+      <UniqueIdentifier>{d9862d8e-8d2f-450f-aded-fef632ca9492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\parser">
+      <UniqueIdentifier>{8195b0b2-f8b9-464c-a81f-11129ca72131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\parser\langdef">
+      <UniqueIdentifier>{6d83ae99-36b8-41bc-90e0-ab2534690c05}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inter.h">
@@ -39,5 +54,16 @@
     <ClInclude Include="const.h">
       <Filter>Header Files\parser\langdef</Filter>
     </ClInclude>
+    <ClInclude Include="structdef.h">
+      <Filter>Header Files\parser\langdef</Filter>
+    </ClInclude>
+    <ClInclude Include="structvalidate.h">
+      <Filter>Header Files\parser</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="langdef.cpp">
+      <Filter>Source Files\parser\langdef</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -14,6 +14,11 @@
     <ClInclude Include="const.h" />
     <ClInclude Include="inter.h" />
     <ClInclude Include="intercontext.h" />
+    <ClInclude Include="structdef.h" />
+    <ClInclude Include="structvalidate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="langdef.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9CCED3C2-09E8-4C07-B108-AF8068F1BCBB}</ProjectGuid>
