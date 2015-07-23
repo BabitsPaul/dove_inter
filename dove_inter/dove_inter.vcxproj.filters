@@ -62,7 +62,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="langdef.cpp">
+    <ClCompile Include="structdef.cpp">
       <Filter>Source Files\parser\langdef</Filter>
     </ClCompile>
   </ItemGroup>

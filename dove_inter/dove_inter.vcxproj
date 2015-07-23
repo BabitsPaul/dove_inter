@@ -18,7 +18,7 @@
     <ClInclude Include="structvalidate.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="langdef.cpp" />
+    <ClCompile Include="structdef.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9CCED3C2-09E8-4C07-B108-AF8068F1BCBB}</ProjectGuid>

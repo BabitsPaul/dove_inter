@@ -141,4 +141,18 @@ const map<opRep , int> createMap()
 
 const map<opRep , int> mp = createMap();
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// special characters
+//
+// a list of special characters and their meaning
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+char* lineDelimiter = "\r\n";
+
+char concatLines = '\\';
+
+char preproc = '#';
+
+char stringDelimiter = '"';
+
 #endif
