@@ -1,5 +1,6 @@
-#include "structdef.h"
+#include "langdef.h"
 #include "const.h"
+#include "..\util\util.h"
 
 #include <map>
 using namespace std;
@@ -18,7 +19,7 @@ using namespace ldef;
 AbstractStructDef::AbstractStructDef(char* name) {
 	this->name = name;
 
-	defMap.insert(pair<string , AbstractStructDef*>(name, this));
+	defMap.insert(pair<string, AbstractStructDef*>(name, this));
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -39,7 +40,7 @@ bool Text::validateNextChar(wchar_t c)
 	if (c > sizeof(char))
 		return false;
 
-	if (!contains<wchar_t>(valid, sizeof(valid), c))
+	if (!util::contains(reinterpret_cast<const wchar_t*>(valid) , sizeof(valid) , c))
 		return false;
 
 	return true;
@@ -58,7 +59,7 @@ AbstractStructDef* Text::delegateTo(wchar_t c) {
 // Definition of blockstatements
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-Block::Block():AbstractStructDef("block"){
+Block::Block() :AbstractStructDef("block") {
 	inBlockStatement = false;
 }
 

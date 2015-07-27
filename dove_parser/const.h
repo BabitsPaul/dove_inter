@@ -1,6 +1,7 @@
 #ifndef _CONST_H
 #define _CONST_H
 
+#include <wchar.h>
 #include <map>
 #include <string>
 using namespace std;
@@ -22,37 +23,37 @@ using namespace std;
 // here the charsets for names, numbers, etc. are defined
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-const char valid[]{
-		//alphabet lowercase
+const wchar_t valid[]{
+	//alphabet lowercase
 	'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-		'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-		//alphabet uppercase
-		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-		'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-		//numbers
-		'1', '2', '3', '4', '5','6', '7', '8', '9', '0',
-		//operators
-		'+', '-', '*', '/', '^', '&', '|', '#', '!', '@', '%', '~',
-		//miscellaneous
-		'§', '$', ' ', '\t', '\\',
-		//brackets
-		'[', ']', '(', ')', '{', '}',
-		//delimiters
-		'\'', '\"', '\n'
+	'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+	//alphabet uppercase
+	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+	'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+	//numbers
+	'1', '2', '3', '4', '5','6', '7', '8', '9', '0',
+	//operators
+	'+', '-', '*', '/', '^', '&', '|', '#', '!', '@', '%', '~',
+	//miscellaneous
+	'§', '$', ' ', '\t', '\\', '?', ':', '.' , ',',
+	//brackets
+	'[', ']', '(', ')', '{', '}',
+	//delimiters
+	'\'', '\"', '\n', '\r', ';'
 };
 
-const char num[]{
+const wchar_t num[]{
 	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
 };
 
-const char lowercase[]{
+const wchar_t lowercase[]{
 	'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-		'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+	'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 };
 
-const char uppercase[]{
+const wchar_t uppercase[]{
 	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-		'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+	'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -62,7 +63,7 @@ const char uppercase[]{
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 struct opRep {
-	opRep(string rep , bool prefix , bool unary) {
+	opRep(string rep, bool prefix, bool unary) {
 		this->rep = rep;
 		this->prefix = prefix;
 		this->unary = unary;
@@ -75,11 +76,11 @@ struct opRep {
 
 typedef pair<opRep, int> OPtoPRIO;
 
-const map<opRep , int> createMap()
+const map<opRep, int> createMap()
 {
-	map<opRep , int> res;
+	map<opRep, int> res;
 
-	res.insert(OPtoPRIO(opRep("(", true, true) , 1));
+	res.insert(OPtoPRIO(opRep("(", true, true), 1));
 	res.insert(OPtoPRIO(opRep("[", true, true), 1));
 	res.insert(OPtoPRIO(opRep(".", true, false), 1));
 	res.insert(OPtoPRIO(opRep("++", false, true), 1));
@@ -117,7 +118,7 @@ const map<opRep , int> createMap()
 
 	res.insert(OPtoPRIO(opRep("|", false, false), 10));
 
-	res.insert(OPtoPRIO(opRep("&&", false, false) ,  11));
+	res.insert(OPtoPRIO(opRep("&&", false, false), 11));
 
 	res.insert(OPtoPRIO(opRep("||", false, false), 12));
 
@@ -139,7 +140,7 @@ const map<opRep , int> createMap()
 	return res;
 }
 
-const map<opRep , int> mp = createMap();
+const map<opRep, int> mp = createMap();
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // special characters
@@ -154,5 +155,7 @@ char concatLines = '\\';
 char preproc = '#';
 
 char stringDelimiter = '"';
+
+char* empty = " \n\r\b\t";
 
 #endif

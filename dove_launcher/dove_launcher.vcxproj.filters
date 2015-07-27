@@ -13,20 +13,5 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\parser">
-      <UniqueIdentifier>{12a68488-1a7d-4f0c-b2db-7d10a864a819}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\inter">
-      <UniqueIdentifier>{0ce4658f-5386-4c8f-8c59-a30bb093ba30}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\comp">
-      <UniqueIdentifier>{239459e4-a063-45a9-8474-12d1d495c2c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\inter">
-      <UniqueIdentifier>{2abf4260-fc4d-4758-969f-6f5d80816a8b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\model">
-      <UniqueIdentifier>{d9862d8e-8d2f-450f-aded-fef632ca9492}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
 </Project>
